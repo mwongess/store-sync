@@ -1,1 +1,1 @@
-# store-sync
+# Store Sync
