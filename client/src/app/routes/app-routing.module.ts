@@ -10,7 +10,7 @@ const routes: Routes = [
       import('../pages/login/login.component').then((m) => m.LoginComponent),
   },
   {
-    path: 'signup',
+    path: 'register',
     loadComponent: () =>
       import('../pages/signup/signup.component').then((m) => m.SignupComponent),
   },
@@ -72,19 +72,14 @@ const routes: Routes = [
       },
     ],
   },
-  
-  // wild card routes
+
+  // wild card route
   {
-    path: 'not-found',
+    path: '**',
     loadComponent: () =>
       import('../pages/not-found/not-found.component').then(
         (m) => m.NotFoundComponent
       ),
-  },
-  {
-    path: '**',
-    pathMatch: 'full',
-    redirectTo: 'not-found',
   },
 ];
 
@@ -93,4 +88,4 @@ const routes: Routes = [
   imports: [CommonModule, RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
