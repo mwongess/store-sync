@@ -1,1 +1,1 @@
-# Store Sync
+# Store Sync - Angular + Nest
