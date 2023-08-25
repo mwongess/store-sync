@@ -3,6 +3,19 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  // auth routes
+  {
+    path: 'login',
+    loadComponent: () =>
+      import('../pages/login/login.component').then((m) => m.LoginComponent),
+  },
+  {
+    path: 'signup',
+    loadComponent: () =>
+      import('../pages/signup/signup.component').then((m) => m.SignupComponent),
+  },
+
+  //app routes
   {
     path: '',
     pathMatch: 'full',
@@ -12,59 +25,60 @@ const routes: Routes = [
     path: 'console',
     loadComponent: () =>
       import('../pages/dashboard/dashboard.component').then(
-        (dash) => dash.DashboardComponent
+        (m) => m.DashboardComponent
       ),
     children: [
       {
         path: 'products',
         loadComponent: () =>
           import('../pages/products/products.component').then(
-            (prdct) => prdct.ProductsComponent
+            (m) => m.ProductsComponent
           ),
       },
       {
         path: 'customers',
         loadComponent: () =>
           import('../pages/customers/customers.component').then(
-            (custms) => custms.CustomersComponent
+            (m) => m.CustomersComponent
           ),
       },
       {
         path: 'orders',
         loadComponent: () =>
           import('../pages/orders/orders.component').then(
-            (ords) => ords.OrdersComponent
+            (m) => m.OrdersComponent
           ),
       },
       {
         path: 'settings',
         loadComponent: () =>
           import('../pages/settings/settings.component').then(
-            (stgs) => stgs.SettingsComponent
+            (m) => m.SettingsComponent
           ),
       },
       {
         path: 'notifications',
         loadComponent: () =>
           import('../pages/notifications/notifications.component').then(
-            (ntfs) => ntfs.NotificationsComponent
+            (m) => m.NotificationsComponent
           ),
       },
       {
         path: 'reports',
         loadComponent: () =>
           import('../pages/reports/reports.component').then(
-            (rprts) => rprts.ReportsComponent
+            (m) => m.ReportsComponent
           ),
       },
     ],
   },
-// other routes
+  
+  // wild card routes
   {
     path: 'not-found',
     loadComponent: () =>
       import('../pages/not-found/not-found.component').then(
-        (notfound) => notfound.NotFoundComponent
+        (m) => m.NotFoundComponent
       ),
   },
   {
