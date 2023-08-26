@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-topnav',
+  selector: 'app-header',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './topnav.component.html',
+  templateUrl: './header.component.html',
 })
-export class TopnavComponent {
+export class HeaderComponent {
 
 }

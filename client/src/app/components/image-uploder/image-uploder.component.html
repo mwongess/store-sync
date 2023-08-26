@@ -1,0 +1,17 @@
+<div>
+  <button id="upload_widget" (click)="openWidget()" class="bg-blue-500 text-white p-3 rounded-lg">
+    Upload File!
+  </button>
+
+  <!-- placeholder for uploaded image -->
+  <img id="uploadedimage" />
+
+  <!-- cloudinary upload widget -->
+  <script
+    src="https://widget.cloudinary.com/v2.0/global/all.js"
+    type="text/javascript"
+  ></script>
+
+  <!-- local upload instantiation -->
+  <script src="upload_widget.js" type="text/javascript"></script>
+</div>

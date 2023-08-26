@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-user',
+  selector: 'app-customer',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './user.component.html',
+  templateUrl: './customer.component.html',
 })
-export class UserComponent {
+export class CustomerComponent {
 
 }
